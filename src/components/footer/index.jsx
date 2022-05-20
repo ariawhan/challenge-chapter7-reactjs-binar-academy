@@ -65,7 +65,7 @@ class Footer extends Component {
                       <img
                         className="img-fluid"
                         src="./images/icons/icon-mail.png"
-                        alt="mail.png"
+                        alt="mail"
                       />
                     </a>
                   </div>

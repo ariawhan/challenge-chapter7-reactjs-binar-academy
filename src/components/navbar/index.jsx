@@ -1,25 +1,9 @@
 import React, { Component } from "react";
+import navbar from "../../data/navbar.json";
 
 class NavBar extends Component {
   state = {
-    navBar: [
-      {
-        name: "Our Services",
-        href: "/#Services",
-      },
-      {
-        name: "Why Us",
-        href: "/#whyus",
-      },
-      {
-        name: "Testimonial",
-        href: "/#Testimonial",
-      },
-      {
-        name: "FAQ",
-        href: "/#faq",
-      },
-    ],
+    navBar: navbar,
   };
   render() {
     return (

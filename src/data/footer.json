@@ -1,0 +1,39 @@
+[
+  {
+    "contact": {
+      "address": "Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000",
+      "email": "binarcarrental@gmail.com",
+      "number": "081-233-334-808"
+    },
+    "sosial": {
+      "title": "Connect with us",
+      "media": [
+        {
+          "href": "https://www.facebook.com/ariawhan",
+          "imgSrc": "./images/icons/icon-facebook.png",
+          "imgalt": "facebook"
+        },
+        {
+          "href": "https://www.instagram.com/gdariawhan",
+          "imgSrc": "./images/icons/icon-instagram.png",
+          "imgalt": "instagram"
+        },
+        {
+          "href": "https://twitter.com/gdariawhan",
+          "imgSrc": "./images/icons/icon-twitter.png",
+          "imgalt": "twitter"
+        },
+        {
+          "href": "ttps://gmail.com",
+          "imgSrc": "./images/icons/icon-mail.png",
+          "imgalt": "mail"
+        },
+        {
+          "href": "https://www.twitch.tv/gdariawhan",
+          "imgSrc": "../images/icons/icon-twitch.png",
+          "imgalt": "twitch"
+        }
+      ]
+    }
+  }
+]
