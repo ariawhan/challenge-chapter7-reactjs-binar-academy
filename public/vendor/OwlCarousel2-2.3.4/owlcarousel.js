@@ -9,8 +9,8 @@ $(".owl-carousel").owlCarousel({
   dots: false,
   margin: false,
   navText: [
-    "<img src='./images/icons/Left-button.png' width='32px' height='32px'>",
-    "<img src='./images/icons/Right-button.png' width='32px' height='32px'>",
+    "<img src='../../images/icons/Left-button.png' width='32px' height='32px'>",
+    "<img src='../../images/icons/Right-button.png' width='32px' height='32px'>",
   ],
   responsive: {
     0: {
