@@ -1,0 +1,7 @@
+{
+  "getCards": {
+    "method": "GET",
+    "host": "https://raw.githubusercontent.com",
+    "endPoint": "/fnurhidayat/probable-garbanzo/main/data/cars.min.json"
+  }
+}

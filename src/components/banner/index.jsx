@@ -9,6 +9,14 @@ class Banner extends Component {
     btn: banner.main.btn,
     img: banner.main.img,
   };
+
+  //hidden btn
+
+  btn = (path) => {
+    if (path == "/")
+      return <Btn id="tombol" href="/cards" name={this.state.btn}></Btn>;
+  };
+
   render() {
     return (
       <>
@@ -18,7 +26,7 @@ class Banner extends Component {
               <div className="col-md-6 intro-text">
                 <h1>{this.state.title}</h1>
                 <p>{this.state.description}</p>
-                <Btn id="tombol" href="/cards" name={this.state.btn}></Btn>
+                {this.btn(window.location.pathname)}
               </div>
               <div className="col-md-6 intro-img">
                 <img className="img-fluid" src={this.state.img} />
