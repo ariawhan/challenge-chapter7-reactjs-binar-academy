@@ -14,6 +14,7 @@ class Landing extends Component {
     cards: landing.cards,
     banner: banner.CTA,
     carousel: landing.carousel,
+    accordion: landing.accordion,
   };
 
   listService = (list) => {
@@ -56,7 +57,7 @@ class Landing extends Component {
         <Cards cards={this.state.cards}></Cards>
         <Banner banner={this.state.banner}></Banner>
         <Carousel carousel={this.state.carousel}></Carousel>
-        <Accordion></Accordion>
+        <Accordion accordion={this.state.accordion}></Accordion>
       </>
     );
   }
