@@ -4,55 +4,59 @@ import Banner from "./components/bannerCTA";
 import Accordion from "./components/accordion";
 import Carousel from "./components/carousel";
 
+//Data
+import landing from "../../data/landing.json";
+import banner from "../../data/banner";
+
 class Landing extends Component {
-  state = {};
+  state = {
+    main: landing.main,
+    cards: landing.cards,
+    banner: banner.CTA,
+  };
+
+  listService = (list) => {
+    return (
+      <React.Fragment>
+        <ul className="ul-main">
+          {list.map((list) => {
+            return (
+              <li>
+                <p>{list}</p>
+              </li>
+            );
+          })}
+        </ul>
+      </React.Fragment>
+    );
+  };
+
   render() {
     return (
-      <div>
+      <>
         <div className="container mt-5" id="Services">
           <div className="main-services">
             <div className="row align-items-center justify-content-center our-services">
               <div className="col-lg-5 col-md-6 our-services-img">
                 <img
-                  src="./images/img-service.png"
+                  src={this.state.main.imgSrc}
                   className="img-fluid"
-                  alt="services"
+                  alt={this.state.main.imgAlt}
                 />
               </div>
               <div className="col-lg-4 offset-lg-1 col-md-6 our-services-list">
-                <h4>Best Car Rental for any kind of trip in (Lokasimu)!</h4>
-                <p>
-                  Sewa mobil di (Lokasimu) bersama Binar Car Rental jaminan
-                  harga lebih murah dibandingkan yang lain, kondisi mobil baru,
-                  serta kualitas pelayanan terbaik untuk perjalanan wisata,
-                  bisnis, wedding, meeting, dll.
-                </p>
-                <ul className="ul-main">
-                  <li>
-                    <p>Sewa Mobil Dengan Supir di Bali 12 Jam</p>
-                  </li>
-                  <li>
-                    <p>Sewa Mobil Lepas Kunci di Bali 24 Jam</p>
-                  </li>
-                  <li>
-                    <p>Sewa Mobil Jangka Panjang Bulanan</p>
-                  </li>
-                  <li>
-                    <p>Gratis Antar - Jemput Mobil di Bandara</p>
-                  </li>
-                  <li>
-                    <p>Layanan Airport Transfer / Drop In Out</p>
-                  </li>
-                </ul>
+                <h4>{this.state.main.title}</h4>
+                <p>{this.state.main.description}</p>
+                {this.listService(this.state.main.list)}
               </div>
             </div>
           </div>
         </div>
-        <Cards></Cards>
-        <Banner></Banner>
+        <Cards cards={this.state.cards}></Cards>
+        <Banner banner={this.state.banner}></Banner>
         <Carousel></Carousel>
         <Accordion></Accordion>
-      </div>
+      </>
     );
   }
 }

@@ -1,7 +1,45 @@
-[
-    "contact": [
-        {
-            
-        }
+{
+  "main": {
+    "title": "Best Car Rental for any kind of trip in Bali!",
+    "description": "Sewa mobil di Bali bersama Binar Car Rental jaminan harga lebih murah dibandingkan yang lain, kondisi mobil baru, serta kualitas pelayanan terbaik untuk perjalanan wisata, bisnis, wedding, meeting, dll.",
+    "imgSrc": "./images/img-service.png",
+    "imgAlt": "services",
+    "list": [
+      "Sewa Mobil Dengan Supir di Bali 12 Jam",
+      "Sewa Mobil Lepas Kunci di Bali 24 Jam",
+      "Sewa Mobil Jangka Panjang Bulanan",
+      "Gratis Antar - Jemput Mobil di Bandara",
+      "Layanan Airport Transfer / Drop In Out"
     ]
-]
+  },
+  "cards": {
+    "title": "Why Us ?",
+    "description": "Mengapa harus pilih Binar Car Rental ?",
+    "listCards": [
+      {
+        "title": "Mobil Lengkap",
+        "description": "Tersedia banyak pilihan mobil, kondisi masih baru, bersih dan terawat",
+        "imgSrc": "./images/icons/icon-complete.png",
+        "imgAlt": "Complete"
+      },
+      {
+        "title": "Harga Murah",
+        "description": "Harga murah dan bersaing, bisa bandingkan harga kami dengan rental mobil lain",
+        "imgSrc": "./images/icons/icon-price.png",
+        "imgAlt": "price"
+      },
+      {
+        "title": "Layanan 24 Jam",
+        "description": "Siap melayani kebutuhan Anda selama 24 jam nonstop.Kami juga tersedia di akhir minggu",
+        "imgSrc": "./images/icons/icon-24hrs.png",
+        "imgAlt": "24hrs"
+      },
+      {
+        "title": "Sopir Profesional",
+        "description": " Sopir yang profesional, berpengalaman, jujur, ramah dan selalu tepat waktu",
+        "imgSrc": "./images/icons/icon-professional.png",
+        "imgAlt": "professional"
+      }
+    ]
+  }
+}
