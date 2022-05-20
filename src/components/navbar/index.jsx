@@ -32,8 +32,8 @@ class NavBar extends Component {
   render() {
     return (
       <>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <div className="container">
+        <div className="container">
+          <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <a className="header-navbar-logo" href="/"></a>
             <button
               className="navbar-toggler"
@@ -52,8 +52,8 @@ class NavBar extends Component {
             >
               {this.navigation(this.state.navigation, this.state.registrasi)}
             </div>
-          </div>
-        </nav>
+          </nav>
+        </div>
       </>
     );
   }
