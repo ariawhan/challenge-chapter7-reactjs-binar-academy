@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Btn from "../btn/";
 import banner from "../../data/banner.json";
 
 class Banner extends Component {
@@ -17,14 +18,7 @@ class Banner extends Component {
               <div className="col-md-6 intro-text">
                 <h1>{this.state.title}</h1>
                 <p>{this.state.description}</p>
-                <button
-                  type="button"
-                  className="button-global"
-                  id="tombol"
-                  onClick="search()"
-                >
-                  {this.state.btn}
-                </button>
+                <Btn id="tombol" onClick="search()" name={this.state.btn}></Btn>
               </div>
               <div className="col-md-6 intro-img">
                 <img className="img-fluid" src={this.state.img} />
