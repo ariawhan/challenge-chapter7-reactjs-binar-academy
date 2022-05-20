@@ -5,19 +5,19 @@ class NavBar extends Component {
     navBar: [
       {
         name: "Our Services",
-        href: "index.html#Services",
+        href: "/#Services",
       },
       {
         name: "Why Us",
-        href: "index.html#whyus",
+        href: "/#whyus",
       },
       {
         name: "Testimonial",
-        href: "index.html#Testimonial",
+        href: "/#Testimonial",
       },
       {
         name: "FAQ",
-        href: "index.html#faq",
+        href: "/#faq",
       },
     ],
   };
@@ -25,7 +25,7 @@ class NavBar extends Component {
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
-          <a className="header-navbar-logo" href="index.html"></a>
+          <a className="header-navbar-logo" href="/"></a>
           <button
             className="navbar-toggler"
             type="button"

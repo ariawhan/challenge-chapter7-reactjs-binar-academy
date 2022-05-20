@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Cards from "./components/cards";
 import Banner from "./components/bannerCTA";
 import Accordion from "./components/accordion";
+import Carousel from "./components/carousel";
 
 class Landing extends Component {
   state = {};
@@ -49,6 +50,7 @@ class Landing extends Component {
         </div>
         <Cards></Cards>
         <Banner></Banner>
+        <Carousel></Carousel>
         <Accordion></Accordion>
       </div>
     );
