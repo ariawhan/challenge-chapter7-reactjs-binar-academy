@@ -56,19 +56,21 @@ class Carousel extends Component {
   };
   render() {
     return (
-      <div class="main-testimoni" id="Testimonial">
-        <div class="container mt-5">
-          <div class="row">
-            <div class="col-12">
-              <h4>{this.state.title}</h4>
-              <p>{this.state.description}</p>
+      <>
+        <div class="main-testimoni" id="Testimonial">
+          <div class="container mt-5">
+            <div class="row">
+              <div class="col-12">
+                <h4>{this.state.title}</h4>
+                <p>{this.state.description}</p>
+              </div>
             </div>
           </div>
+          <section class="container-fluid">
+            {this.carousel(this.state.listCarousel)}
+          </section>
         </div>
-        <section class="container-fluid">
-          {this.carousel(this.state.listCarousel)}
-        </section>
-      </div>
+      </>
     );
   }
 }
