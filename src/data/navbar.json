@@ -1,18 +1,23 @@
-[
-  {
-    "name": "Our Services",
-    "href": "/#Services"
-  },
-  {
-    "name": "Why Us",
-    "href": "/#whyus"
-  },
-  {
-    "name": "Testimonial",
-    "href": "/#Testimonial"
-  },
-  {
-    "name": "FAQ",
-    "href": "/#faq"
+{
+  "navigation": [
+    {
+      "name": "Our Services",
+      "href": "/#Services"
+    },
+    {
+      "name": "Why Us",
+      "href": "/#whyus"
+    },
+    {
+      "name": "Testimonial",
+      "href": "/#Testimonial"
+    },
+    {
+      "name": "FAQ",
+      "href": "/#faq"
+    }
+  ],
+  "registrasi": {
+    "btn": "Registrasi"
   }
-]
+}

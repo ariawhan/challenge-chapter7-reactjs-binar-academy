@@ -7,7 +7,7 @@ class Footer extends Component {
     contact: footer.contact,
     social: footer.social,
     copyright: footer.copyright,
-    navigation: navbar,
+    navigation: navbar.navigation,
   };
 
   contact = (contact) => {

@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import navbar from "../../data/navbar.json";
+import Btn from "../btn";
 
 class NavBar extends Component {
   state = {
-    navBar: navbar,
+    navigation: navbar.navigation,
+    registrasi: navbar.registrasi,
   };
 
-  navigation = (navBar) => {
+  navigation = (navBar, registrasi) => {
     return (
       <React.Fragment>
         <ul className="navbar-nav mr-auto">
@@ -20,14 +22,7 @@ class NavBar extends Component {
             );
           })}
           <li className="nav-item">
-            <button
-              type="button"
-              className="button-global"
-              data-bs-toggle="modal"
-              data-bs-target="#modalregister"
-            >
-              Register
-            </button>
+            <Btn id="tombol" onClick="search()" name={registrasi.btn}></Btn>
           </li>
         </ul>
       </React.Fragment>
@@ -55,7 +50,7 @@ class NavBar extends Component {
               className="collapse navbar-collapse justify-content-end bg-light"
               id="navbarNav"
             >
-              {this.navigation(this.state.navBar)}
+              {this.navigation(this.state.navigation, this.state.registrasi)}
             </div>
           </div>
         </nav>
