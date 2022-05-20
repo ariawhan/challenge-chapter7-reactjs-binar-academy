@@ -33,7 +33,7 @@ class NavBar extends Component {
     return (
       <>
         <div className="container">
-          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <nav className="navbar navbar-expand-lg">
             <a className="header-navbar-logo" href="/"></a>
             <button
               className="navbar-toggler"

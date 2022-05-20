@@ -18,7 +18,7 @@ class Banner extends Component {
               <div className="col-md-6 intro-text">
                 <h1>{this.state.title}</h1>
                 <p>{this.state.description}</p>
-                <Btn id="tombol" onClick="search()" name={this.state.btn}></Btn>
+                <Btn id="tombol" href="/cards" name={this.state.btn}></Btn>
               </div>
               <div className="col-md-6 intro-img">
                 <img className="img-fluid" src={this.state.img} />

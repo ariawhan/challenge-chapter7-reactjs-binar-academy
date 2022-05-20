@@ -14,8 +14,10 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <NavBar />
-        <Banner />
+        <header>
+          <NavBar />
+          <Banner />
+        </header>
         <Public />
         <Footer />
       </BrowserRouter>

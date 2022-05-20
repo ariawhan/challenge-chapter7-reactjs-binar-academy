@@ -17,7 +17,7 @@ class BannerCTA extends Component {
               <h2>{this.state.title}</h2>
               <p>{this.state.description}</p>
               <div className="main-banner-button">
-                <Btn id="tombol" onClick="search()" name={this.state.btn}></Btn>
+                <Btn id="tombol" href="/cards" name={this.state.btn}></Btn>
               </div>
             </div>
           </div>

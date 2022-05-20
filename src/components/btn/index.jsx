@@ -1,22 +1,20 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Btn extends Component {
   state = {
     id: this.props.id,
-    onClick: this.props.onClick,
+    href: this.props.href,
     name: this.props.name,
   };
   render() {
     return (
       <>
-        <button
-          type="button"
-          className="button-global"
-          id={this.state.id}
-          onClick={this.state.onClick}
-        >
-          {this.state.name}
-        </button>
+        <Link to={`${this.state.href}`}>
+          <button type="button" className="button-global" id={this.state.id}>
+            {this.state.name}
+          </button>
+        </Link>
       </>
     );
   }
