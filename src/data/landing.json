@@ -41,5 +41,38 @@
         "imgAlt": "professional"
       }
     ]
+  },
+  "carousel": {
+    "title": "Testimonial",
+    "description": "Berbagai review positif dari para pelanggan kami",
+    "listCarousel": [
+      {
+        "imgStarSrc": "./images/icons/icon-rate.png",
+        "imgStarAlt": "rate",
+        "imgPeopleSrc": "./images/img-photo-1.png",
+        "imgPeopleAlt": "men",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+        "name": "John Dee",
+        "date": "20/05/2022"
+      },
+      {
+        "imgStarSrc": "./images/icons/icon-rate.png",
+        "imgStarAlt": "rate",
+        "imgPeopleSrc": "./images/img-photo-2.png",
+        "imgPeopleAlt": "grils",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+        "name": "John Dee",
+        "date": "20/05/2022"
+      },
+      {
+        "imgStarSrc": "./images/icons/icon-rate.png",
+        "imgStarAlt": "rate",
+        "imgPeopleSrc": "./images/img-photo-1.png",
+        "imgPeopleAlt": "men",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+        "name": "John Dee",
+        "date": "20/05/2022"
+      }
+    ]
   }
 }
