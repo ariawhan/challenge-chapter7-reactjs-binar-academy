@@ -1,0 +1,13 @@
+{
+  "main": {
+    "title": "Sewa & Rental Mobil Terbaik di kawasan Bali",
+    "description": "Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu untuk sewa mobil selama 24 jam.",
+    "btn": "Mulai Sewa Mobil",
+    "img": "./images/img-car.svg"
+  },
+  "CTA": {
+    "title": "Sewa Mobil di Bali Sekarang",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "btn": "Mulai Sewa Mobil"
+  }
+}
