@@ -12,26 +12,23 @@ class Cards extends Component {
       <React.Fragment>
         {list.map((list) => {
           return (
-            <div class="col-md-6 col-lg-3 main-whyus-items">
-              <div class="card">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-1">
-                      <img
-                        src={list.imgSrc}
-                        width="32px"
-                        height="32px"
-                        alt={list.imgAlt}
-                      />
-                    </div>
-                    <div class="col-12">
-                      <h5 class="card-title">{list.title}</h5>
-                      <p class="card-text">{list.description}</p>
-                    </div>
+            <>
+              <div class="col">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <img
+                      className="mb-3 mt-2"
+                      src={list.imgSrc}
+                      width="32px"
+                      height="32px"
+                      alt={list.imgAlt}
+                    />
+                    <h5 class="card-title">{list.title}</h5>
+                    <p class="card-text">{list.description}</p>
                   </div>
                 </div>
               </div>
-            </div>
+            </>
           );
         })}
       </React.Fragment>
@@ -48,11 +45,7 @@ class Cards extends Component {
                 <p>{this.state.description}</p>
               </div>
             </div>
-            <div class="col-12 main-whyus-cards">
-              <div class="row justify-content-center">
-                {this.listCards(this.state.listCards)}
-              </div>
-            </div>
+            <div class="row">{this.listCards(this.state.listCards)}</div>
           </div>
         </div>
       </>

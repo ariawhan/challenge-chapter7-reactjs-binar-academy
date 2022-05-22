@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import "./style.css";
 
 class Btn extends Component {
   state = {
@@ -8,10 +9,11 @@ class Btn extends Component {
     name: this.props.name,
   };
   render() {
+    const isBtn = this.props.isBtn;
     return (
       <>
         <Link to={`${this.state.href}`}>
-          <button type="button" className="button-global" id={this.state.id}>
+          <button type="button" className="button" id={this.state.id}>
             {this.state.name}
           </button>
         </Link>

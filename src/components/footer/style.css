@@ -1,0 +1,53 @@
+/* footer */
+
+footer {
+  margin-bottom: 100px;
+}
+
+.footer-nav p {
+  font-weight: bold;
+  color: black;
+}
+
+.footer-nav a {
+  text-decoration: none;
+}
+
+.title-icons,
+.connect-icons {
+  margin-left: 100px;
+}
+
+.connect-icons img:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  transform: scale(1.2);
+}
+
+.footer-nav p:hover {
+  transform: scale(1.1);
+}
+
+.copyright-title {
+  text-align: right;
+}
+
+.copyright-logo {
+  margin-left: 166px;
+  background: #0d28a6;
+  width: 100px;
+  height: 34px;
+  color: white;
+  text-align: center;
+  padding-top: 4px;
+  padding-bottom: 1px;
+  display: block;
+  text-decoration: none;
+}
+
+.copyright-logo:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  transform: scale(1.2);
+  color: white;
+}

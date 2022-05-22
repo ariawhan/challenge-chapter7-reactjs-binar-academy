@@ -5,9 +5,12 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 //Css
-import "./css/style.css";
+// import "./css/style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/responsive.css";
+
+//css
+import "./App.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

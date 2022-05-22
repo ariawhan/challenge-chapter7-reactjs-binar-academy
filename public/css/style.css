@@ -1,0 +1,11 @@
+html {
+  scrollbar-width: none;
+}
+
+body {
+  font-family: Helvetica;
+  color: black;
+  background-color: rebeccapurple;
+  font-style: normal;
+  font-weight: 300;
+}

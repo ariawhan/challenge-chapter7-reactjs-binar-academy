@@ -1,10 +1,12 @@
 import React, { Component } from "react";
+import Banner from "../../components/banner";
 
 class Cards extends Component {
   state = {};
   render() {
     return (
       <>
+        <Banner btn={false} />
         <div
           id="search"
           class="container border bg-primary rounded p-3 mt-2 col-9"

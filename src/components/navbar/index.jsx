@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import navbar from "../../data/navbar.json";
 import Btn from "../btn";
+import "./style.css";
 
 class NavBar extends Component {
   state = {
@@ -22,7 +23,7 @@ class NavBar extends Component {
             );
           })}
           <li className="nav-item">
-            <Btn id="tombol" onClick="search()" name={registrasi.btn}></Btn>
+            <Btn id="tombol" href="/registration" name={registrasi.btn}></Btn>
           </li>
         </ul>
       </React.Fragment>
@@ -34,7 +35,9 @@ class NavBar extends Component {
       <>
         <div className="container">
           <nav className="navbar navbar-expand-lg">
-            <a className="header-navbar-logo" href="/"></a>
+            <a className="logo" href="/">
+              ARIAWAN
+            </a>
             <button
               className="navbar-toggler"
               type="button"

@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import Cards from "./components/cards";
-import Banner from "./components/bannerCTA";
+// import Banner from "./components/bannerCTA";
 import Accordion from "./components/accordion";
 import Carousel from "./components/carousel";
+import Banner from "../../components/banner";
 
 //Data
 import landing from "../../data/landing.json";
@@ -36,6 +37,7 @@ class Landing extends Component {
   render() {
     return (
       <>
+        <Banner btn="true" />
         <div className="container mt-5" id="Services">
           <div className="main-services">
             <div className="row align-items-center justify-content-center our-services">
@@ -55,7 +57,7 @@ class Landing extends Component {
           </div>
         </div>
         <Cards cards={this.state.cards}></Cards>
-        <Banner banner={this.state.banner}></Banner>
+        {/* <Banner banner={this.state.banner}></Banner> */}
         <Carousel carousel={this.state.carousel}></Carousel>
         <Accordion accordion={this.state.accordion}></Accordion>
       </>

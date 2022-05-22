@@ -1,101 +1,14 @@
-html {
-  scrollbar-width: none;
-}
-
 /* Body -> font */
-body {
-  font-family: Helvetica;
-  color: black;
-  font-style: normal;
-  font-weight: 300;
-}
-
-svg {
-  color: #8a8a8a;
-}
 
 /* css global */
-h1 {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 150%;
-}
-
-h4 {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 36px;
-}
-
-h5 {
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 24px;
-}
-
-p {
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 20px;
-  margin-top: 16px;
-}
-
-.button-global {
-  background-color: #5cb85f;
-  border: #5cb85f;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 12px;
-  padding-right: 12px;
-  color: white;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 20px;
-  border-radius: 2px;
-}
-
 /* header */
-header {
+/* header {
   background-color: #f1f3ff;
   padding-top: 24px;
   position: relative;
-}
-
-.bg-light {
-  background-color: #f1f3ff !important;
-}
-
-/* Navbar */
-.header-navbar-logo {
-  background: #0d28a6;
-  width: 100px;
-  height: 34px;
-}
-
-.navbar-toggler {
-  border: none;
-}
-
-.navbar-toggler:focus {
-  box-shadow: none;
-}
-
-.nav-item a {
-  color: black;
-  margin-right: 18px;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 20px;
-}
+} */
 
 /* Header Banner and img */
-.header-banner h1 {
-  margin-top: 100px;
-}
-
-.header-banner img {
-  margin-top: 17px;
-}
 
 /* PupUP */
 .modal-body p {
@@ -103,13 +16,6 @@ header {
 }
 .modal-body input {
   margin-bottom: 30px;
-}
-
-/* Main */
-main {
-  margin-top: 104px;
-  margin-bottom: 150px;
-  background-color: white;
 }
 
 #search {
@@ -292,42 +198,11 @@ main {
   background-color: #0d28a6;
 }
 
-.main-banner h2 {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 150%;
-  color: #ffffff;
-  text-align: center;
-}
-
-.main-banner p {
-  text-align: center;
-  color: #ffffff;
-}
-
-.main-banner-button {
-  text-align: center;
-  margin-top: 64px;
-}
-
 .main-faq {
   margin-top: 100px;
 }
 
 /* footer */
-footer {
-  margin-bottom: 100px;
-}
-
-.footer-nav p {
-  font-weight: bold;
-  color: black;
-}
-
-.footer-nav a {
-  text-decoration: none;
-}
-
 .footer-logo {
   display: flex;
   width: 100px;
@@ -338,20 +213,6 @@ footer {
 /* hover */
 .button-global:hover,
 .header-navbar-logo:hover,
-.footer-logo:hover,
-.footer-connect-icons img:hover {
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  transform: scale(1.2);
-}
-
-.nav-item a:hover {
-  background-color: rgb(98, 193, 233);
-  color: white;
-  border-radius: 3%;
-  transform: scale(1.1);
-}
-
 #search:target,
 #search:target {
   display: block;

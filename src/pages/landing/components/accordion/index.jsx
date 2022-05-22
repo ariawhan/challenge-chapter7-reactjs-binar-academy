@@ -10,16 +10,16 @@ class Accordion extends Component {
   accordion = (list) => {
     return (
       <React.Fragment>
-        <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div className="accordion" id="accordionPanelsStayOpenExample">
           {list.map((list) => {
             return (
-              <div class="accordion-item mb-3 border">
+              <div className="accordion-item mb-3 border">
                 <h2
-                  class="accordion-header"
+                  className="accordion-header"
                   id={"panelsStayOpen-heading" + list.id}
                 >
                   <button
-                    class="accordion-button collapsed"
+                    className="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target={"#panelsStayOpen-collapseOne" + list.id}
@@ -31,11 +31,11 @@ class Accordion extends Component {
                 </h2>
                 <div
                   id={"panelsStayOpen-collapseOne" + list.id}
-                  class="accordion-collapse collapse"
+                  className="accordion-collapse collapse"
                   aria-labelledby={"panelsStayOpen-heading" + list.id}
                 >
-                  <div class="accordion-body">
-                    <p class="paragraf">{list.description}</p>
+                  <div className="accordion-body">
+                    <p className="paragraf">{list.description}</p>
                   </div>
                 </div>
               </div>
@@ -48,16 +48,14 @@ class Accordion extends Component {
   render() {
     return (
       <>
-        <div class="container mt-5" id="faq">
-          <div class="main-faq">
-            <div class="row">
-              <div class="col-lg-5 col-md-12">
-                <h4>{this.state.title}</h4>
-                <p>{this.state.description}</p>
-              </div>
-              <div class="col-lg-7 col-md-12">
-                {this.accordion(this.state.listAccordion)}
-              </div>
+        <div className="container mt-5" id="faq">
+          <div className="row">
+            <div className="col-lg-5 col-md-12">
+              <h4>{this.state.title}</h4>
+              <p>{this.state.description}</p>
+            </div>
+            <div className="col-lg-7 col-md-12">
+              {this.accordion(this.state.listAccordion)}
             </div>
           </div>
         </div>

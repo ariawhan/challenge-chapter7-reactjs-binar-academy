@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import footer from "../../data/footer.json";
 import navbar from "../../data/navbar.json";
+import "./style.css";
 
 class Footer extends Component {
   state = {
@@ -39,8 +40,8 @@ class Footer extends Component {
   socialMedia = (social) => {
     return (
       <React.Fragment>
-        <p>{social.title}</p>
-        <div className="footer-connect-icons">
+        <p className="title-icons">{social.title}</p>
+        <div className="connect-icons">
           <div className="row">
             {social.media.map((media) => {
               return (
@@ -64,8 +65,10 @@ class Footer extends Component {
   copyright = (copyright) => {
     return (
       <React.Fragment>
-        <p>{copyright.title}</p>
-        <a className="footer-logo" href={copyright.url}></a>
+        <p className="copyright-title">{copyright.title}</p>
+        <a className="copyright-logo" href={copyright.url}>
+          {copyright.name}
+        </a>
       </React.Fragment>
     );
   };
@@ -74,18 +77,18 @@ class Footer extends Component {
     return (
       <>
         <footer>
-          <div className="container mt-5">
+          <div className="container">
             <div className="row">
-              <div className="col-lg-2 col-md-3 p-4">
+              <div className="col-lg-2 col-md-3 ">
                 {this.contact(this.state.contact)}
               </div>
-              <div className="ol-lg-2 col-md-3 p-4">
+              <div className="ol-lg-2 col-md-3  text-center">
                 {this.navigation(this.state.navigation)}
               </div>
-              <div className="ol-lg-2 col-md-3 p-4">
+              <div className="ol-lg-2 col-md-4 ">
                 {this.socialMedia(this.state.social)}
               </div>
-              <div className="ol-lg-2 col-md-3 p-4">
+              <div className="ol-lg-2 col-md-3 ">
                 {this.copyright(this.state.copyright)}
               </div>
             </div>
