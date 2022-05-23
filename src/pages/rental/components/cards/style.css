@@ -30,3 +30,17 @@
   max-height: 180px;
   object-fit: cover;
 }
+
+.button-card {
+  background-color: #5cb85f;
+  border: #5cb85f;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 2px;
+}

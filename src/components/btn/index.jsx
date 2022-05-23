@@ -13,7 +13,7 @@ class Btn extends Component {
     return (
       <>
         <Link to={`${this.state.href}`}>
-          <button type="button" className="button" id={this.state.id}>
+          <button type="sumbit" className="button" id={this.state.id}>
             {this.state.name}
           </button>
         </Link>
