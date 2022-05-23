@@ -1,0 +1,20 @@
+{
+  "search": {
+    "type": {
+      "title": "Tipe Driver",
+      "selected": "Pilih Tipe Driver",
+      "options": [
+        { "value": 1, "name": "Pilih Tipe Driver" },
+        { "value": 2, "name": "Tanpa Supir (Lepas Kunci)" }
+      ]
+    },
+    "date": {
+      "title": "Date"
+    },
+    "time": {
+      "title": "Waktu Jemput/Ambil"
+    },
+    "passenger": { "title": "Jumlah Penumpang (Optional)" },
+    "btn": { "name": "Cari Mobil" }
+  }
+}

@@ -1,0 +1,32 @@
+.search-card {
+  background: #ffffff;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 8% !important;
+  font-family: "Helvetica";
+  font-style: normal;
+  color: #000000;
+}
+
+.search-card img {
+  border-radius: 5%;
+}
+
+.search-card svg {
+  margin-right: 10px;
+}
+
+.search-card span {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+}
+.search-card button {
+  margin-top: -8px !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.img-car img {
+  max-height: 180px;
+  object-fit: cover;
+}
