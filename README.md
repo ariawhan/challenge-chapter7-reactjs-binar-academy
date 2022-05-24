@@ -26,7 +26,7 @@ This application use node JS for runtime environment
 To install all package modules use :
 
 ```
-& npm install (to install all package modules)
+& npm install
 
 ```
 
