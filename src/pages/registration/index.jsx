@@ -12,8 +12,7 @@ const Section = styled.section`
 
 class Registration extends Component {
   state = {
-    clientId:
-      "69658947465-7osqf4m6tf5vea9vobu1r5gu3vpv7c72.apps.googleusercontent.com",
+    clientId: process.env.REACT_APP_GOOGLE_CLIENT_ID,
     name: localStorage.getItem("name"),
     email: localStorage.getItem("email"),
     googleId: localStorage.getItem("googleId"),
