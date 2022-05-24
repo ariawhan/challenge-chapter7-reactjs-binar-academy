@@ -4,7 +4,7 @@ This Team Project challenge chapter 7 from Binar Academy
 to lean React library, Http request, UI Framework, Styling, Component, State dan Property
 Thanks to [Imam Hermawan](https://gitlab.com/ImamTaufiqHermawan) for teach this application
 
-### Applications
+#### Applications Introduction
 
 - This application use front-end JavaScript library name REACT
 - This applications use router library name react-dom for route page application
