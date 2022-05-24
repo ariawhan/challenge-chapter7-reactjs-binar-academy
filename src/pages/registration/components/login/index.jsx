@@ -3,7 +3,13 @@ import { GoogleLogin } from "react-google-login";
 class Login extends Component {
   state = { clientId: this.props.clientId };
   responseGoogle = (response) => {
-    console.log(response.Ca);
+    if (response.Ca !== undefined) {
+      const data = { status: true, message: response };
+      this.props.onLoginDataHandler(data);
+    } else {
+      const data = { status: false, message: response };
+      this.props.onLoginDataHandler(data);
+    }
   };
   render() {
     return (

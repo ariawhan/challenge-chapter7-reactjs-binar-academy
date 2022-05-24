@@ -10,7 +10,7 @@ class Logout extends Component {
   };
 
   onSuccess = () => {
-    console.log("Logout Success");
+    this.props.onLogoutDataHandler();
   };
 
   render() {
