@@ -1,47 +1,132 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 import Banner from "../../components/banner";
 import Search from "./components/search";
-// import Cards from "./components/cards";
-import cards from "../../data/cards.json";
+import Cards from "./components/cards";
+import dataCars from "../../data/cards.json";
 
-import axios from "axios";
+// redux
+import { useDispatch, useSelector } from "react-redux";
+import { getListCars } from "../../redux/actions/carsAction";
 
-class Rental extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { search: cards.search };
-  }
-  getData = () => {
-    const data = [];
-    axios
-      .get(
-        "https://raw.githubusercontent.com/fnurhidayat/probable-garbanzo/main/data/cars.min.json"
-      )
-      .then(function (response) {
-        // handle success
-        // console.log(response);
-        for (let i = 0; i < response.data.length; i++) {
-          data.push(response.data[i]);
+function Rental() {
+  //state
+  const [isWarning, setIsWarning] = useState(false);
+  const [msgWarning, setMsgWarning] = useState("");
+  const [typeWarning, setTypeWarning] = useState("");
+  const [listCars, setlistCars] = useState([]);
+
+  //get from reducers
+  const { getListCarsResult, getListCarsLoading, getListCarsError } =
+    useSelector((state) => state.CarsReducers);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    //memanggil actions getListCars
+    dispatch(getListCars());
+  }, [dispatch]);
+
+  const saveSearchDataHandler = (dataSearch) => {
+    console.log(dataSearch);
+    if (dataSearch.date.length === 0 || dataSearch.time.length === 0) {
+      setIsWarning(true);
+      setMsgWarning("Silakan lengkapi form tanggal dan waktu !");
+      setTypeWarning("alert-warning");
+      setlistCars([]);
+    } else {
+      setIsWarning(false);
+      setMsgWarning("");
+      setTypeWarning("");
+      if (getListCarsResult) {
+        setIsWarning(false);
+        setMsgWarning("");
+        setTypeWarning("");
+        //Prosses Dara Cars
+        let inputDateTime = dataSearch.date + "T" + dataSearch.time + "Z";
+        // 2022-03-23T 15:49:05.563 Z
+        let filteredCars = getListCarsResult.filter((car) => {
+          if (dataSearch.passenger === "") {
+            return (
+              car.available === true
+              // &&
+              // Date.parse(car.availableAt) > Date.parse(inputDateTime)
+            );
+          } else {
+            return (
+              car.available === true &&
+              Date.parse(car.availableAt) > Date.parse(inputDateTime)
+              // &&
+              // parseInt(car.capacity) >= parseInt(this.state.inputPassenger)
+            );
+          }
+        });
+        console.log(filteredCars);
+        if (filteredCars.length === 0) {
+          setIsWarning(true);
+          setMsgWarning(
+            "Mohon maaf kendaraan belum tersedia di hari tersebut !"
+          );
+          setTypeWarning("alert-primary");
+          setlistCars([]);
+        } else {
+          return setlistCars(filteredCars);
         }
-        // return response;
-      })
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      });
-    return data;
+      } else if (getListCarsLoading) {
+        setIsWarning(true);
+        setMsgWarning("Loading Data Cars . . . . .");
+        setTypeWarning("alert-light");
+      } else if (getListCarsError) {
+        setIsWarning(true);
+        setMsgWarning("404 Bad Request  ' " + getListCarsError + " ' ");
+        setTypeWarning("alert-danger");
+      }
+    }
   };
 
-  render() {
+  const renderCars = (cars) => {
+    console.log(cars);
     return (
       <>
-        {/* {console.log(this.getData())} */}
-        <Banner btn={false} />
-        <Search search={this.state.search} data={this.getData()}></Search>
-        {/* <Cards></Cards> */}
+        {cars.map((car) => {
+          return (
+            <Cards
+              imgSrc={car.image}
+              type={car.type}
+              manufacture={car.manufacture}
+              rentPerDay={car.rentPerDay}
+              description={car.description}
+              capacity={car.capacity}
+              transmission={car.transmission}
+              year={car.year}
+              btn="Pilih Mobil"
+            ></Cards>
+          );
+        })}
       </>
     );
-  }
+  };
+
+  return (
+    <>
+      <Banner btn={false} />
+      <Search
+        search={dataCars.search}
+        onSaveSearchDataHandler={saveSearchDataHandler}
+      ></Search>
+      <div class="container mt-5 col-md-9">
+        {isWarning ? (
+          <div className={"alert " + typeWarning} role="alert">
+            <h5 className="text-center">{msgWarning}</h5>
+          </div>
+        ) : (
+          <></>
+        )}
+        <div class="row row-cols-lg-3 row-cols-sm-2 row-cols-1 g-3">
+          {renderCars(listCars)}
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default Rental;
