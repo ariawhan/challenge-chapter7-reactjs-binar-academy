@@ -19,6 +19,24 @@ Thanks to [Imam Hermawan](https://gitlab.com/ImamTaufiqHermawan) for teach this 
 
 - [Ariawhan](https://gitlab.com/Ariawhan)
 
+## Run Application
+
+This application use node JS for runtime environment
+
+To install all package modules use :
+
+```
+& npm install (to install all package modules)
+
+```
+
+To run application use :
+
+```
+& npm run start
+
+```
+
 ## Mockup Application
 
 Bellow is the views pages this application :
@@ -26,14 +44,3 @@ Bellow is the views pages this application :
 ![Alt-Text](/docs/auth.png)
 
 ![Alt-Text](/docs/rental.png)
-
-## Run Application
-
-This application use node JS for runtime environment
-
-```
-- npm install (to install all package modules)
-
-```
-
-> $ npm run start (to run application)
