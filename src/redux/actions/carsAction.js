@@ -1,4 +1,5 @@
 import axios from "axios";
+import config from "../../config/api.json";
 
 export const GET_LIST_CARS = "GET_LIST_CARS";
 
@@ -11,8 +12,8 @@ export const getListCars = () => {
     });
     //get API
     axios({
-      method: "GET",
-      url: "https://raw.githubusercontent.com/fnurhidayat/probable-garbanzo/main/data/cars.min.json",
+      method: config.getCards.method,
+      url: config.getCards.host + config.getCards.endPoint,
       timeout: 120000,
     })
       .then(function (response) {
