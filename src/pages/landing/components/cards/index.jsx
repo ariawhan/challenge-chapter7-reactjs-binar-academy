@@ -1,11 +1,6 @@
 import React, { Component } from "react";
-import { useMediaQuery } from "react-responsive";
 
 class Cards extends Component {
-  // responsive = {
-  //   // isPortrait: useMediaQuery({ query: "(orientation: portrait)" }),
-  //   isTabletOrMobile: useMediaQuery({ query: "(max-width: 1224px)" }),
-  // };
   state = {
     title: this.props.cards.title,
     description: this.props.cards.description,

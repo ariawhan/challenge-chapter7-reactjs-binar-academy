@@ -91,6 +91,7 @@ class Registration extends Component {
   render() {
     return (
       <Section>
+        {useEffect}
         <div className="container">
           <div class="row justify-content-md-center text-center">
             <div class="col-lg-6">

@@ -34,7 +34,11 @@ class Banner extends Component {
               )}
             </div>
             <div className="col-md-6 intro-img">
-              <img className="img-fluid" src={this.state.img} />
+              <img
+                className="img-fluid"
+                src={this.state.img}
+                alt={this.state.img}
+              />
             </div>
           </div>
         </div>

@@ -42,7 +42,7 @@ function Rental() {
         setMsgWarning("");
         setTypeWarning("");
         //Prosses Dara Cars
-        let inputDateTime = dataSearch.date + "T" + dataSearch.time + "Z";
+        // let inputDateTime = dataSearch.date + "T" + dataSearch.time + "Z";
         // 2022-03-23T 15:49:05.563 Z
         let filteredCars = getListCarsResult.filter((car) => {
           if (dataSearch.passenger === "") {

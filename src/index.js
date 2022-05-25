@@ -5,9 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 //Css
-// import "./css/style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./css/responsive.css";
 
 // redux
 import { createStore, compose, applyMiddleware } from "redux";

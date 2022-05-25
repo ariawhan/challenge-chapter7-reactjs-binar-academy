@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Cards from "./components/cards";
-// import Banner from "./components/bannerCTA";
 import Accordion from "./components/accordion";
 import Carousel from "./components/carousel";
 import Banner from "../../components/banner";

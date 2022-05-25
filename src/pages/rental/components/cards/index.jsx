@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./style.css";
-import Btn from "../../../../components/btn";
 
 class Cards extends Component {
   render() {

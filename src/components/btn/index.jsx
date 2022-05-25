@@ -9,7 +9,6 @@ class Btn extends Component {
     name: this.props.name,
   };
   render() {
-    const isBtn = this.props.isBtn;
     return (
       <>
         <Link to={`${this.state.href}`}>
