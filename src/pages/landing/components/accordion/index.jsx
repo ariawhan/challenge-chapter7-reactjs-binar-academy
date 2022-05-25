@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./style.css";
 
 class Accordion extends Component {
   state = {
@@ -49,13 +50,15 @@ class Accordion extends Component {
     return (
       <>
         <div className="container mt-5" id="faq">
-          <div className="row">
-            <div className="col-lg-5 col-md-12">
-              <h4>{this.state.title}</h4>
-              <p>{this.state.description}</p>
-            </div>
-            <div className="col-lg-7 col-md-12">
-              {this.accordion(this.state.listAccordion)}
+          <div className="accordion-landing">
+            <div className="row">
+              <div className="col-lg-5 col-md-12">
+                <h4>{this.state.title}</h4>
+                <p>{this.state.description}</p>
+              </div>
+              <div className="col-lg-7 col-md-12">
+                {this.accordion(this.state.listAccordion)}
+              </div>
             </div>
           </div>
         </div>

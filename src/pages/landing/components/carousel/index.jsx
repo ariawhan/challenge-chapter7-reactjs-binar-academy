@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./style.css";
 
 class Carousel extends Component {
@@ -10,49 +13,67 @@ class Carousel extends Component {
 
   carousel = (list) => {
     return (
-      <React.Fragment>
-        <div class="main-testimoni-carousel">
-          <div class="owl-carousel owl-theme">
-            {list.map((list) => {
-              return (
-                <div class="item">
-                  <div class="main-testimoni-deks">
-                    <div class="row">
-                      <div class="col-2 offset-3">
-                        <img
-                          class="img-fluid"
-                          src={list.imgStarSrc}
-                          alt={list.imgStarAlt}
-                        />
-                      </div>
+      <OwlCarousel
+        navText={[
+          "<img src='./images/icons/Left-button.png' width='32px' height='32px'>",
+          "<img src='./images/icons/Right-button.png' width='32px' height='32px'>",
+        ]}
+        className="owl-theme"
+        loop={true}
+        center={true}
+        dots={false}
+        margin={100}
+        nav={true}
+        responsive={{
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 2,
+          },
+          1000: {
+            items: 2,
+          },
+        }}
+      >
+        {list.map((list) => {
+          return (
+            <>
+              <div className="item p-4">
+                <div className="item-content">
+                  <div className="row justify-content-center align-items-center ">
+                    <div className="col-sm-3 col-lg-3">
+                      <img
+                        // class="img-fluid"
+                        src={list.imgPeopleSrc}
+                        alt={list.imgStarAlt}
+                        style={{ width: "80px" }}
+                        className="mx-auto"
+                      />
                     </div>
-                    <div class="row">
-                      <div class="col-2">
-                        <div class="main-testimoni-images">
-                          <img
-                            src={list.imgPeopleSrc}
-                            alt={list.imgPeopleAlt}
-                          />
+                    <div className="col-9">
+                      <div className="star-content">
+                        <div class="row">
+                          <div class="col-lg-2 col-5">
+                            <img
+                              class="img-fluid"
+                              src={list.imgStarSrc}
+                              alt={list.imgStarAlt}
+                            />
+                          </div>
                         </div>
                       </div>
-                      <div class="col-9 offset-1">
-                        <p>{list.description}</p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="main-testimoni-name">
-                        <div class="col- offset-3">
-                          <p>{list.name + ", " + list.date}</p>
-                        </div>
-                      </div>
+
+                      <p>{list.description}</p>
+                      <p className="desc">{list.name + ", " + list.date}</p>
                     </div>
                   </div>
                 </div>
-              );
-            })}
-          </div>
-        </div>
-      </React.Fragment>
+              </div>
+            </>
+          );
+        })}
+      </OwlCarousel>
     );
   };
   render() {

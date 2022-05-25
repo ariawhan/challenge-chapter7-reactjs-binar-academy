@@ -82,13 +82,13 @@ class Footer extends Component {
               <div className="col-lg-2 col-md-3 ">
                 {this.contact(this.state.contact)}
               </div>
-              <div className="ol-lg-2 col-md-3  text-center">
+              <div className=" col-md-3">
                 {this.navigation(this.state.navigation)}
               </div>
-              <div className="ol-lg-2 col-md-4 ">
+              <div className=" col-md-4 ">
                 {this.socialMedia(this.state.social)}
               </div>
-              <div className="ol-lg-2 col-md-3 ">
+              <div className=" col-md-3 ">
                 {this.copyright(this.state.copyright)}
               </div>
             </div>

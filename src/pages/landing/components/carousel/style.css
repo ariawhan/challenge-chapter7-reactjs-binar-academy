@@ -1,41 +1,72 @@
-.main-testimoni h4,
-.main-testimoni p {
-  text-align: center;
-}
-
-.main-testimoni-carousel {
-  padding-top: 20px;
-  border: 50;
-}
-
 .item {
   background: #f1f3ff;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
-  width: 619px;
-  margin-right: 32px;
-  margin-bottom: 30px;
-  cursor: grab;
+  border: 0 10px;
+  padding-top: 60px;
 }
 
-.main-testimoni-deks {
-  padding-top: 69px;
-  padding-left: 49px;
-  padding-bottom: 69px;
-  padding-right: 46px;
-}
-
-.main-testimoni-images {
-  margin-top: 20px;
-  padding-bottom: 20px;
-}
-
-.main-testimoni-deks p {
-  text-align: left;
-}
-
-.main-testimoni-name p {
+.desc {
   font-weight: bold;
-  margin-top: -5px;
-  padding-left: 4px;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+  .item-content {
+    padding-top: 45px;
+  }
+  .item {
+    height: 270px;
+    margin-top: 30px;
+  }
+  .main-testimoni {
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: 979px) and (max-width: 1200px) {
+  .item-content {
+    padding-top: 60px;
+  }
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+}
+
+@media (max-width: 992px) {
+  .owl-theme {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .rating div {
+    justify-content: center;
+  }
+  .user {
+    text-align: center;
+  }
+  .avatar {
+    margin-bottom: 16px;
+  }
+  .rating .star {
+    margin-bottom: 16px;
+    align-items: center;
+  }
+  .item-content {
+    padding-top: 10px;
+  }
+  .star-content {
+    margin-top: 20px;
+  }
+  .item {
+    height: 400px;
+    margin-top: 10px;
+  }
+  .main-testimoni {
+    margin-top: 150px;
+  }
+  .main-testimoni p,
+  .main-testimoni h4 {
+    text-align: center;
+  }
 }

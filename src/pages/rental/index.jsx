@@ -53,9 +53,8 @@ function Rental() {
             );
           } else {
             return (
-              car.available === true &&
-              Date.parse(car.availableAt) > Date.parse(inputDateTime)
-              // &&
+              car.available === true
+              //  &&
               // parseInt(car.capacity) >= parseInt(this.state.inputPassenger)
             );
           }

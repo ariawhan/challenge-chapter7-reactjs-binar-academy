@@ -1,7 +1,7 @@
 /* footer */
-
 footer {
-  margin-bottom: 100px;
+  margin-bottom: 40px;
+  margin-top: -50px;
 }
 
 .footer-nav p {
@@ -11,11 +11,6 @@ footer {
 
 .footer-nav a {
   text-decoration: none;
-}
-
-.title-icons,
-.connect-icons {
-  margin-left: 100px;
 }
 
 .connect-icons img:hover {
@@ -28,12 +23,7 @@ footer {
   transform: scale(1.1);
 }
 
-.copyright-title {
-  text-align: right;
-}
-
 .copyright-logo {
-  margin-left: 190px;
   background: #0d28a6;
   width: 100px;
   height: 34px;
@@ -50,4 +40,62 @@ footer {
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
   transform: scale(1.2);
   color: white;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+  .copyright-logo {
+    margin-left: 190px;
+  }
+  .title-icons,
+  .connect-icons {
+    margin-left: 100px;
+  }
+  .copyright-title {
+    text-align: right;
+  }
+  .footer-nav {
+    text-align: center;
+  }
+}
+
+@media (min-width: 979px) and (max-width: 1200px) {
+  .footer-nav {
+    text-align: center;
+  }
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  .footer-nav {
+    text-align: center;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  .connect-icons {
+    margin-right: 200px;
+  }
+  .copyright-logo {
+    margin-bottom: 40px;
+  }
+  .copyright-title {
+    margin-top: 40px;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .copyright-logo {
+    margin-left: 148px;
+    margin-bottom: 40px;
+  }
+  .copyright-title {
+    text-align: center;
+    margin-top: 40px;
+  }
+  .connect-icons {
+    margin-right: 50px;
+  }
 }

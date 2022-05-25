@@ -9,6 +9,9 @@ import Banner from "../../components/banner";
 import landing from "../../data/landing.json";
 import banner from "../../data/banner";
 
+//style
+import "./style.css";
+
 class Landing extends Component {
   state = {
     main: landing.main,
@@ -50,7 +53,7 @@ class Landing extends Component {
               </div>
               <div className="col-lg-4 offset-lg-1 col-md-6 our-services-list">
                 <h4>{this.state.main.title}</h4>
-                <p>{this.state.main.description}</p>
+                <p className="description">{this.state.main.description}</p>
                 {this.listService(this.state.main.list)}
               </div>
             </div>

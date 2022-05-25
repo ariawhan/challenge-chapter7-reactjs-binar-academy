@@ -35,7 +35,9 @@ class Cards extends Component {
                   </h5>
                 </div>
                 <div>
-                  <p class="mt-0">{this.props.description}</p>
+                  <p style={{ minHeight: "70px" }} class="mt-0">
+                    {this.props.description}
+                  </p>
                 </div>
                 <div>
                   <p>

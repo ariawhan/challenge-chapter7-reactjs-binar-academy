@@ -51,8 +51,8 @@ const Search = (props) => {
         class="container border bg-primary rounded p-3 mt-2 col-9"
       >
         <form onSubmit={handleClick}>
-          <div class="row gx-3 gy-2 mx-3 align-items-center">
-            <div class="col-sm-2 m-2">
+          <div class="row gx-3 gy-2 mx-3 align-items-center justify-content-md-center">
+            <div class="col-lg-2 col-md-4 m-2">
               <label for="specificSizeSelect">{state.type.title}</label>
               <select class="form-select mt-2" id="specificSizeSelect">
                 <option selected>{state.type.selected}</option>
@@ -61,7 +61,7 @@ const Search = (props) => {
                 })}
               </select>
             </div>
-            <div class="col-sm-2 m-2">
+            <div class="col-lg-2 col-md-4 m-2">
               <label for="specificSizeSelect ">{state.date.title}</label>
               <input
                 type="date"
@@ -72,7 +72,7 @@ const Search = (props) => {
                 id="inputTanggal"
               />
             </div>
-            <div class="col-sm-2 m-2">
+            <div class="col-lg-2 col-md-4 m-2">
               <label for="specificSizeSelect">{state.time.title}</label>
               <input
                 type="time"
@@ -82,7 +82,7 @@ const Search = (props) => {
                 id="inputWaktu"
               />
             </div>
-            <div class="col-sm-3 m-2">
+            <div class="col-lg-3 col-md-4 m-2">
               <label for="specificSizeInputGroupUsername">
                 {state.passenger.title}
               </label>
@@ -109,7 +109,7 @@ const Search = (props) => {
                 </div>
               </div>
             </div>
-            <div class="col-sm-2 text-center">
+            <div class="col-lg-2 col-md-4 text-center">
               <div className="mt-4">
                 <button type="submit" class="button">
                   Cari Mobil
