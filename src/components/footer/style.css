@@ -91,11 +91,12 @@ footer {
 /* Landscape phones and down */
 @media (max-width: 480px) {
   .copyright-logo {
-    margin-left: 148px;
+    /* margin-left: 148px; */
     margin-bottom: 40px;
+    margin-right: 300px;
   }
   .copyright-title {
-    text-align: center;
+    /* text-align: center; */
     margin-top: 40px;
   }
   .connect-icons {

@@ -24,14 +24,7 @@ class Cards extends Component {
                         height="32px"
                         alt={list.imgAlt}
                       />
-                      <h5
-                      // class={
-                      //   "card-title " +
-                      //   (this.responsive.isPortrait && "text-center")
-                      // }
-                      >
-                        {list.title}
-                      </h5>
+                      <h5 class="card-title ">{list.title}</h5>
                       <p class="card-text">{list.description}</p>
                     </div>
                   </div>

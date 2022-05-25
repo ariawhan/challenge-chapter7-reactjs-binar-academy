@@ -87,7 +87,6 @@ class Cards extends Component {
               </div>
             </div>
             <button class="button-card mt-4">Pilih Mobil</button>
-            {/* <Btn id="tombol" href="/cards" name={this.props.btn}></Btn> */}
           </div>
         </div>
       </>

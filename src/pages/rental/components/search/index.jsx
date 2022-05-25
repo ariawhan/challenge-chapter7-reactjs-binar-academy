@@ -114,7 +114,6 @@ const Search = (props) => {
                 <button type="submit" class="button">
                   Cari Mobil
                 </button>
-                {/* <Btn id="search" href="/cards" name="Cari Mobil"></Btn> */}
               </div>
             </div>
           </div>

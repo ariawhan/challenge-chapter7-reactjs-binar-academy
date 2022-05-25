@@ -16,6 +16,7 @@ import reducers from "./redux/reducers";
 //css
 import "./App.css";
 
+//store
 const store = createStore(reducers, compose(applyMiddleware(thunk)));
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
