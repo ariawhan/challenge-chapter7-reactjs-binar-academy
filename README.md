@@ -44,3 +44,5 @@ Bellow is the views pages this application :
 ![Alt-Text](/docs/auth.png)
 
 ![Alt-Text](/docs/rental.png)
+
+![Alt-Text](/docs/landing.png)
