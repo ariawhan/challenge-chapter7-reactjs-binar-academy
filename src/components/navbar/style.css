@@ -22,7 +22,7 @@
 }
 
 .nav-item a:hover {
-  background-color: rgb(42, 112, 143);
+  background-color: #dbdffb;
   color: white;
   border-radius: 3%;
   transform: scale(1.1);
@@ -33,4 +33,58 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 979px) and (max-width: 1200px) {
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  .open-nav {
+    background-color: #e4e7f7;
+  }
+  .open-navbar {
+    background-color: #f1f3ff;
+  }
+  .open-navbar {
+    background-color: #f1f3ff;
+  }
+  .btn-nav {
+    margin-top: 50px !important;
+  }
+  .nav-item a {
+    padding-top: 30px !important;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .open-nav {
+    background-color: #e4e7f7;
+  }
+  .open-navbar {
+    background-color: #f1f3ff;
+  }
+  .btn-nav {
+    margin-top: 50px !important;
+  }
+  .nav-item a {
+    padding-top: 30px !important;
+  }
 }
