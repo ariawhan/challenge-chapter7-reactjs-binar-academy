@@ -6,7 +6,7 @@ class Cards extends Component {
     return (
       <>
         <div class="col">
-          <div class="card h-100 p-2">
+          <div class="card h-100 p-2 search-card">
             <div class="">
               <div class="card-body">
                 <div class="image-card">

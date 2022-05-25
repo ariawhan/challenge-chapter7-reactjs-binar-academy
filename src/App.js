@@ -9,28 +9,37 @@ import Footer from "./components/footer";
 //routes
 import Public from "./routes/public";
 
-// //css
-// import "./App.css";
-
 class App extends Component {
-  state = {googleClientId : process.env.REACT_APP_GOOGLE_CLIENT_ID}
+  state = { googleClientId: process.env.REACT_APP_GOOGLE_CLIENT_ID };
   render() {
-    if (this.state.googleClientId === null || this.state.googleClientId === "" || this.state.googleClientId === undefined) {
-      return  <ErrServer code="500" message="Before use this application, Please use environment variables to run this application and restart application. If you have trouble please contact dev!"></ErrServer>
-    }
-    else {
+    if (
+      this.state.googleClientId === null ||
+      this.state.googleClientId === "" ||
+      this.state.googleClientId === undefined
+    ) {
       return (
-        <BrowserRouter>
-        {console.log(this.state.googleClientId)}
-          <header>
-            <NavBar />
-          </header>
-          <main>
-            <Public />
-          </main>
-          <Footer />
-        </BrowserRouter>
+        <ErrServer
+          code="500"
+          message="Before use this application, Please use environment variables to run this application and restart application. If you have trouble please contact dev!"
+        ></ErrServer>
       );
+    } else {
+      let path = window.location.pathname.toString();
+      if (path === "/" || path === "/cards" || path === "/registration") {
+        return (
+          <BrowserRouter>
+            <header>
+              <NavBar />
+            </header>
+            <main>
+              <Public />
+            </main>
+            <Footer />
+          </BrowserRouter>
+        );
+      } else {
+        return <ErrServer code="400" message="Page Not Found!"></ErrServer>;
+      }
     }
   }
 }
