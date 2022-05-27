@@ -26,11 +26,72 @@ function Rental() {
     dispatch(getListCars());
   }, [dispatch]);
 
+  // const saveSearchDataHandler = (dataSearch) => {
+  //   if (
+  //     dataSearch.date.length === 0 ||
+  //     dataSearch.time.length === 0 ||
+  //     dataSearch.type.length === 0
+  //   ) {
+  //     setIsWarning(true);
+  //     setMsgWarning(
+  //       "Silakan lengkapi form type driver, tanggal beserta waktu !"
+  //     );
+  //     setTypeWarning("alert-warning");
+  //     setlistCars([]);
+  //   } else {
+  //     setIsWarning(false);
+  //     setMsgWarning("");
+  //     setTypeWarning("");
+  //     dispatch(getListCars(dataSearch));
+  //     if (getListCarsResult) {
+  //       setIsWarning(false);
+  //       setMsgWarning("");
+  //       setTypeWarning("");
+  //       if (getListCarsResult.length === 0) {
+  //         setIsWarning(true);
+  //         setMsgWarning(
+  //           "Mohon maaf kendaraan belum tersedia di hari tersebut !"
+  //         );
+  //         setTypeWarning("alert-primary");
+  //         setlistCars([]);
+  //       } else {
+  //         return setlistCars(getListCarsResult);
+  //       }
+  //     }
+  //   }
+  // };
+
+  const filterCars = (listForFilter, Search) => {
+    let inputDateTime = Search.date + "T" + Search.time + "Z";
+    const filterType = listForFilter.filter((car) => {
+      return car.transmission.toLowerCase() === Search.type.toLowerCase();
+    });
+    const filteredCars = filterType.filter((car) => {
+      if (Search.passenger.length !== 0) {
+        return (
+          car.available === true &&
+          car.capacity >= Search.passenger &&
+          Date.parse(car.availableAt) <= Date.parse(inputDateTime)
+        );
+      } else {
+        return (
+          car.available === true &&
+          Date.parse(car.availableAt) <= Date.parse(inputDateTime)
+        );
+      }
+    });
+    return filteredCars;
+  };
+
   const saveSearchDataHandler = (dataSearch) => {
     console.log(dataSearch);
-    if (dataSearch.date.length === 0 || dataSearch.time.length === 0) {
+    if (
+      dataSearch.date.length === 0 ||
+      dataSearch.time.length === 0 ||
+      dataSearch.type.length === 0
+    ) {
       setIsWarning(true);
-      setMsgWarning("Silakan lengkapi form tanggal dan waktu !");
+      setMsgWarning("Silakan lengkapi form type driver, tanggal dan waktu !");
       setTypeWarning("alert-warning");
       setlistCars([]);
     } else {
@@ -42,25 +103,8 @@ function Rental() {
         setMsgWarning("");
         setTypeWarning("");
         //Prosses Dara Cars
-        // let inputDateTime = dataSearch.date + "T" + dataSearch.time + "Z";
-        // 2022-03-23T 15:49:05.563 Z
-        let filteredCars = getListCarsResult.filter((car) => {
-          if (dataSearch.passenger === "") {
-            return (
-              car.available === true
-              // &&
-              // Date.parse(car.availableAt) > Date.parse(inputDateTime)
-            );
-          } else {
-            return (
-              car.available === true
-              //  &&
-              // parseInt(car.capacity) >= parseInt(this.state.inputPassenger)
-            );
-          }
-        });
-        console.log(filteredCars);
-        if (filteredCars.length === 0) {
+        const listCars = filterCars(getListCarsResult, dataSearch);
+        if (listCars.length === 0) {
           setIsWarning(true);
           setMsgWarning(
             "Mohon maaf kendaraan belum tersedia di hari tersebut !"
@@ -68,7 +112,7 @@ function Rental() {
           setTypeWarning("alert-primary");
           setlistCars([]);
         } else {
-          return setlistCars(filteredCars);
+          return setlistCars(listCars);
         }
       } else if (getListCarsLoading) {
         setIsWarning(true);
@@ -83,7 +127,7 @@ function Rental() {
   };
 
   const renderCars = (cars) => {
-    console.log(cars);
+    // console.log(cars);
     return (
       <>
         {cars.map((car) => {

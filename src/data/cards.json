@@ -4,8 +4,9 @@
       "title": "Tipe Driver",
       "selected": "Pilih Tipe Driver",
       "options": [
-        { "value": 1, "name": "Dengan Kunci" },
-        { "value": 2, "name": "Tanpa Supir (Lepas Kunci)" }
+        { "value": "Automatic", "name": "Automatic" },
+        { "value": "Automanual", "name": "Automanual" },
+        { "value": "Manual", "name": "Manual" }
       ]
     },
     "date": {

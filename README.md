@@ -1,7 +1,7 @@
 # Challenge Chapter 7 Binar Academy
 
-This Team Project challenge chapter 7 from Binar Academy
-to lean React library, Http request, UI Framework, Styling, Component, State dan Property
+This project challenge chapter 7 from Binar Academy
+to lean React library, Http request, UI Framework, Styling, Component, State dan Property.
 Thanks to [Imam Hermawan](https://gitlab.com/ImamTaufiqHermawan) for teach this application
 
 #### Applications Introduction

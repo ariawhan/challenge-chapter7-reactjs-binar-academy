@@ -6,6 +6,7 @@ const Search = (props) => {
   const [inputPassenger, setInputPassenger] = useState("");
   const [inputDate, setInputDate] = useState("");
   const [inputTime, setInputTime] = useState("");
+  const [inputType, setInputType] = useState("");
   const state = {
     type: props.search.type,
     date: props.search.date,
@@ -14,34 +15,55 @@ const Search = (props) => {
     btn: props.search.btn,
   };
 
+  const formatYmd = (date) => {
+    var today = new Date();
+    var dd = today.getDate();
+
+    var mm = today.getMonth() + 1;
+    var yyyy = today.getFullYear();
+    if (dd < 10) {
+      dd = "0" + dd;
+    }
+
+    if (mm < 10) {
+      mm = "0" + mm;
+    }
+    return yyyy + "-" + mm + "-" + dd;
+  };
+
   const handleChangePassenger = (event) => {
     return setInputPassenger(event.target.value);
   };
 
+  const handleChangeType = (event) => {
+    return setInputType(event.target.value);
+  };
+
   const handleChangeTime = (event) => {
-    return setInputDate(event.target.value);
+    return setInputTime(event.target.value);
   };
 
   const handleChangeDate = (event) => {
-    return setInputTime(event.target.value);
+    return setInputDate(event.target.value);
   };
 
   const handleClick = (event) => {
     event.preventDefault();
 
     const data = {
+      type: inputType,
       passenger: inputPassenger,
       date: inputDate,
       time: inputTime,
     };
-
+    // dispatch(getListCars(data));
     // console.log("search", data);
 
     props.onSaveSearchDataHandler(data);
     // clear entered state
-    // setInputPassenger("");
-    // setInputDate("");
-    // setInputTime("");
+    setInputPassenger("");
+    setInputDate("");
+    setInputTime("");
   };
 
   return (
@@ -54,7 +76,11 @@ const Search = (props) => {
           <div class="row gx-3 gy-2 mx-3 align-items-center justify-content-md-center">
             <div class="col-lg-2 col-md-4 m-2">
               <label for="specificSizeSelect">{state.type.title}</label>
-              <select class="form-select mt-2" id="specificSizeSelect">
+              <select
+                onChange={handleChangeType}
+                class="form-select mt-2"
+                id="specificSizeSelect"
+              >
                 <option selected>{state.type.selected}</option>
                 {state.type.options.map((option) => {
                   return <option value={option.value}>{option.name}</option>;
@@ -65,8 +91,8 @@ const Search = (props) => {
               <label for="specificSizeSelect ">{state.date.title}</label>
               <input
                 type="date"
-                min="2022-05-23"
-                // value={inputDate}
+                min={formatYmd()}
+                value={inputDate}
                 onChange={handleChangeDate}
                 class="form-control mt-2"
                 id="inputTanggal"
@@ -76,7 +102,7 @@ const Search = (props) => {
               <label for="specificSizeSelect">{state.time.title}</label>
               <input
                 type="time"
-                // value={inputTime}
+                value={inputTime}
                 onChange={handleChangeTime}
                 class="form-control  mt-2"
                 id="inputWaktu"
