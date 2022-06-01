@@ -10,7 +10,7 @@ class Public extends Component {
       <Routes>
         <Route path="/" exact element={<Landing />} />
         <Route path="/cards" element={<Rental />} />
-//         <Route path="/registration" element={<Registration />} />
+        <Route path="/registration" element={<Registration />} />
       </Routes>
     );
   }
