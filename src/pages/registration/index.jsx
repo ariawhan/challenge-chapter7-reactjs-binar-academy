@@ -11,49 +11,49 @@ const Section = styled.section`
 `;
 
 class Registration extends Component {
-  state = {
-    clientId: process.env.REACT_APP_GOOGLE_CLIENT_ID,
-    name: localStorage.getItem("name"),
-    email: localStorage.getItem("email"),
-    googleId: localStorage.getItem("googleId"),
-  };
+//   state = {
+//     clientId: process.env.REACT_APP_GOOGLE_CLIENT_ID,
+//     name: localStorage.getItem("name"),
+//     email: localStorage.getItem("email"),
+//     googleId: localStorage.getItem("googleId"),
+//   };
 
-  authGoogle = () => {
-    console.log(this.state.email);
-    if (this.state.googleId !== null && this.state.googleId !== "") {
-      // toUpperCase in frit world
-      let name = this.state.name;
-      name = name
-        .split(" ")
-        .map((name) => name.charAt(0).toUpperCase() + name.slice(1))
-        .join(" ");
-      return (
-        <>
-          <Logout
-            clientId={this.state.clientId}
-            name={name}
-            email={this.state.email}
-            googleId={this.state.googleId}
-            onLogoutDataHandler={this.onLogoutDataHandler}
-          ></Logout>
-        </>
-      );
-    } else {
-      return (
-        <>
-          <Login
-            onLoginDataHandler={this.onLoginDataHandler}
-            clientId={this.state.clientId}
-          ></Login>
-        </>
-      );
-    }
-  };
+//   authGoogle = () => {
+//     console.log(this.state.email);
+//     if (this.state.googleId !== null && this.state.googleId !== "") {
+//       // toUpperCase in frit world
+//       let name = this.state.name;
+//       name = name
+//         .split(" ")
+//         .map((name) => name.charAt(0).toUpperCase() + name.slice(1))
+//         .join(" ");
+//       return (
+//         <>
+//           <Logout
+//             clientId={this.state.clientId}
+//             name={name}
+//             email={this.state.email}
+//             googleId={this.state.googleId}
+//             onLogoutDataHandler={this.onLogoutDataHandler}
+//           ></Logout>
+//         </>
+//       );
+//     } else {
+//       return (
+//         <>
+//           <Login
+//             onLoginDataHandler={this.onLoginDataHandler}
+//             clientId={this.state.clientId}
+//           ></Login>
+//         </>
+//       );
+//     }
+//   };
 
-  useEffect = () => {
-    function start() {
-      gapi.client.init({
-//         clientId: this.state.clientId,
+//   useEffect = () => {
+//     function start() {
+//       gapi.client.init({
+// //         clientId: this.state.clientId,
 //         scope: "",
 //       });
 //     }
